@@ -23,6 +23,7 @@ GRAY COLOR: #343a40
 body {
   font-family: "Inter", sans-serif;
   color: #343a40;
+  border-top: 10px solid #1c7ed6;
   border-bottom: 10px solid #1c7ed6;
 }
 
@@ -109,6 +110,10 @@ img {
 
 /* FEATURES */
 .features-icon {
+  stroke: #1c7ed6;
+  width: 32x;
+  height: 32px;
+  margin-bottom: 16px;
 }
 
 .features-title {
@@ -172,6 +177,9 @@ h3 {
 }
 
 .chair-icon {
+  stroke: #1c7ed6;
+  width: 24x;
+  height: 24px;
 }
 
 .chair-price {
