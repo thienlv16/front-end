@@ -4,6 +4,11 @@ SPACING SYSTEM (px)
 
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+BASE COLOR
+MAIN COLOR: #1c7ed6
+GRAY COLOR: #343a40
+
 */
 
 * {
@@ -16,7 +21,9 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  border-bottom: 10px solid #1c7ed6;
 }
 
 .container {
@@ -30,6 +37,8 @@ section {
 }
 
 h2 {
+  font-size: 36px;
+  letter-spacing: -0.5px;
   margin-bottom: 48px;
 }
 
@@ -37,6 +46,32 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 80px;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #1c7ed6;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  display: inline-block;
+  font-weight: 500;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #4dabf7;
+}
+
+.btn--big {
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+.btn--small {
+  font-size: 14px;
+  padding: 8px 12px;
 }
 
 /* ------------------------ */
@@ -56,10 +91,15 @@ header {
 }
 
 h1 {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -1px;
   margin-bottom: 24px;
 }
 
 .header-text {
+  font-size: 18px;
+  line-height: 1.7;
   margin-bottom: 24px;
 }
 
@@ -72,14 +112,20 @@ img {
 }
 
 .features-title {
+  font-size: 20px;
   margin-bottom: 16px;
 }
 
 .features-text {
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 /* TESTIMONIAL */
 .testimonial-section {
+  background-color: #1c7ed6;
+  color: #fff;
+  padding: 24px;
 }
 
 .testimonial-box {
@@ -88,10 +134,13 @@ img {
 }
 
 .testimonial-box h2 {
+  font-size: 24px;
   margin-bottom: 24px;
 }
 
 .testimonial-text {
+  font-size: 18px;
+  line-height: 1.7;
   font-style: italic;
   margin-bottom: 24px;
 }
@@ -102,6 +151,7 @@ img {
 }
 
 h3 {
+  font-size: 20px;
   margin-bottom: 24px;
 }
 
@@ -127,8 +177,11 @@ h3 {
 .chair-price {
   display: flex;
   justify-content: space-between;
+  font-size: 20px;
 }
 
 footer {
   margin-bottom: 48px;
+  font-size: 14px;
+  color: #495057;
 }
