@@ -98,6 +98,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -107,6 +108,11 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s;
+
+  /* Only for .btn*/
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--primary:link,
@@ -150,6 +156,18 @@ body {
   border-bottom: 1px solid transparent;
 }
 
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fdf2e9;
+  color: #45260a;
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
@@ -172,6 +190,10 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
@@ -244,4 +266,9 @@ strong {
 .feature-text {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
