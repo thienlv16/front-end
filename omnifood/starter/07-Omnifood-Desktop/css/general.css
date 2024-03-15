@@ -50,6 +50,7 @@
 html {
   /* font-size: 10px; */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -57,6 +58,7 @@ body {
   color: #343a40;
   line-height: 1;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 /************************/
