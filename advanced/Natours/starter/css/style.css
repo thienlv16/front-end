@@ -14,49 +14,74 @@ Dark green: #28b485
 }
 
 html {
+  font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Lato", sans-serif;
-  font-size: 62.5%;
   line-height: 1.7;
   font-weight: 400;
   color: #777;
 }
 
-.header {
-  height: 85vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.7),
-      rgba(40, 180, 133, 0.7)
-    ),
-    url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: 2rem;
+  transition: all 0.3s;
+  font-size: 1.6rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   position: relative;
-
-  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
 }
 
-.logo-box {
+.btn:hover {
+  transform: translateY(-0.3rem);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
   position: absolute;
-  top: 4rem;
-  left: 4rem;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
 }
 
-.logo {
-  height: 3.5rem;
-  cursor: pointer;
+.btn--white {
+  background-color: #fff;
+  color: #777;
 }
 
-.text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 1s;
+  animation-fill-mode: backwards;
 }
 
 .heading-primary {
@@ -64,6 +89,7 @@ body {
   text-transform: uppercase;
 
   backface-visibility: hidden;
+  margin-bottom: 6rem;
 }
 
 .heading-primary--main {
@@ -88,10 +114,44 @@ body {
   animation: moveInRight 1s ease-out;
 }
 
+.header {
+  height: 85vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.7),
+      rgba(40, 180, 133, 0.7)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+  cursor: pointer;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-10rem);
   }
 
   /* 60% {
@@ -99,7 +159,7 @@ body {
   } */
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -111,11 +171,23 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
   }
 
   100% {
