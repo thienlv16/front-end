@@ -4,7 +4,7 @@
   "description": "Landing page for natuores",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass scss/main.scss css/style.css -w"
+    "compile": "node-sass scss/main.scss css/style.css -w"
   },
   "author": "thienlv",
   "license": "ISC",
