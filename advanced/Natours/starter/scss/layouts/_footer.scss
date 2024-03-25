@@ -2,9 +2,17 @@
   background-color: $color-gray-dark-3;
   padding: 10rem 0;
 
+  @include responsive(900) {
+    padding: 8rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include responsive(900) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__logo {
@@ -16,6 +24,11 @@
     border-top: 1px solid $color-gray-light-1;
     display: inline-block;
     padding-top: 2rem;
+
+    @include responsive(900) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -51,7 +64,7 @@
   }
 
   &__copyright {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
     border-top: 1px solid $color-gray-light-1;
     display: inline-block;
     padding-top: 2rem;

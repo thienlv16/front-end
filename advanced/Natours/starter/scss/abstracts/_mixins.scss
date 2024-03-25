@@ -14,28 +14,28 @@
 }
 
 @mixin responsive($breakpoint) {
-  @if $breakpoint == phone {
+  @if $breakpoint == 600 {
     @media (max-width: 37.5em) {
       //600px
       @content;
     }
   }
 
-  @if $breakpoint == tab-portrait {
+  @if $breakpoint == 900 {
     @media (max-width: 56.25em) {
       //900px
       @content;
     }
   }
 
-  @if $breakpoint == tab-landscape {
+  @if $breakpoint == 1200 {
     @media (max-width: 75em) {
       //1200px
       @content;
     }
   }
 
-  @if $breakpoint == big-desktop {
+  @if $breakpoint == 1800 {
     @media (min-width: 112.5em) {
       //1800px
       @content;

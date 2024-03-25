@@ -16,6 +16,11 @@
     animation-timing-function: ease-out;
     /* animation-iteration-count: 4; */
     /* animation-delay: 1s; */
+
+    @include responsive(600) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
   }
 
   &--sub {
@@ -25,6 +30,10 @@
     letter-spacing: 1.74rem;
 
     animation: moveInRight 1s ease-out;
+
+    @include responsive(600) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -42,6 +51,14 @@
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.3s;
+
+  @include responsive(900) {
+    font-size: 3rem;
+  }
+
+  @include responsive(600) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(2deg) scale(1.1);

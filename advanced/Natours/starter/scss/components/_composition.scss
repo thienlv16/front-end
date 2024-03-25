@@ -11,6 +11,13 @@
 
     outline-offset: 2rem;
 
+    @include responsive(900) {
+      float: left;
+      position: relative;
+      width: 33.333333333333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
+
     &:hover {
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
@@ -23,16 +30,33 @@
     &--p1 {
       top: 0;
       left: -2rem;
+
+      @include responsive(900) {
+        left: 0;
+        transform: scale(1.1);
+      }
     }
 
     &--p2 {
       top: 5rem;
       right: 0;
+
+      @include responsive(900) {
+        top: -2rem;
+        transform: scale(1.3);
+        z-index: 100;
+      }
     }
 
     &--p3 {
       top: 10rem;
       left: 20%;
+
+      @include responsive(900) {
+        top: 0;
+        left: 0;
+        transform: scale(1.1);
+      }
     }
   }
 
