@@ -11,6 +11,13 @@
   justify-content: center;
   align-items: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -19,13 +26,13 @@
     border: none;
     padding: 0.75rem 2rem;
     border-radius: 100px;
-    width: 80%;
-    margin-right: -3.5rem;
+    width: 90%;
+    margin-right: -3.25rem;
     transition: all 0.3s;
 
     &:focus {
       outline: none;
-      width: 90%;
+      width: 100%;
       background-color: var(--color-grey-light-3);
     }
 
@@ -192,6 +199,11 @@
         justify-content: center;
         padding: 2rem;
       }
+
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        padding: 1.5rem 0.5rem;
+      }
     }
   }
 
@@ -200,6 +212,13 @@
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.75rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 }
 
@@ -237,6 +256,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -273,15 +297,28 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
+
     &-average {
       font-size: 2.25rem;
       font-weight: 300;
       margin-bottom: -0.3rem;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.8rem;
+      }
     }
 
     &-count {
       font-size: 0.9rem;
       text-transform: uppercase;
+      text-align: center;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 0.6rem;
+      }
     }
   }
 }
@@ -346,6 +383,10 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -358,6 +399,11 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 2rem;
     margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
 }
 
